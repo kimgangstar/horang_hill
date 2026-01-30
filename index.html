@@ -10,8 +10,84 @@
 </head>
 <body>
     <div id="wrap">
-        <div id="header"></div>
-        <div id="main">
+        <div id="header"><!-- s : header -->
+            <h1><a href="#"><img src="#" alt="호랑나무가시언덕 게스트하우스"></a></h1>
+            <nav id="gnb">
+                <ul class="lnb_depth1"><!-- depth1 -->
+                    <li><a href="#">호랑나무가시언덕</a>
+                        <ul class="lnb_depth2"><!-- depth2  -->
+                            <li><a href="#">숙소소개/시설안내</a>
+                                <ul class="lnb_depth3">
+                                    <li><a href="#">라운지</a></li>
+                                    <li><a href="#">주방</a></li>
+                                    <li><a href="#">옥상/테라스</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">객실소개</a>
+                        <ul class="gnb_depth2">
+                            <li><a href="#">Standard</a>
+                                <ul> <!-- depth2 -->
+                                    <li><a href="#">상세 정보 및 비치품 목록</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Deluxe</a>
+                                <ul>
+                                    <li><a href="#">상세 정보 및 비치품 목록</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Dormitory</a>
+                                <ul>
+                                    <li><a href="#">상세 정보 및 비치품 목록</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">예약안내</a>
+                        <ul class="lnb_depth2"> <!-- depth2 -->
+                            <li><a href="#">실시간 예약</a></li>
+                            <li><a href="#">예약 확인/취소</a>
+                                <ul class="lnb_depth3"> <!-- depth3 -->
+                                    <li><a href="#">예약 조회</a></li>
+                                    <li><a href="#">취소 신청</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">이용규정 및 환불정책</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">오시는길</a>
+                        <ul>
+                            <li><a href="#">오시는 길</a>
+                                <ul>
+                                    <li><a href="#">도보/대중 교통 경로</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">주변 정보</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객센터</a>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이벤트</a>
+                                <ul>
+                                    <li><a href="#">진행중인 이벤트</a></li>
+                                    <li><a href="#">종료 이벤트</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">이용 후기</a></li>
+                            <li><a href="#">Q&A</a>
+                                <ul>
+                                    <li><a href="#">자주 묻는 질문</a></li>
+                                    <li><a href="#">1:1문의</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- e : header -->
+        <div id="main"> <!-- s : main -->
             <!-- 히어로배너  + 검색 폼 -->
             <div id="hero_bnr">
                 <div class="add_text">
@@ -60,12 +136,12 @@
                     </div>
                     <div class="person">
                         <h2>인원</h2>
-                        <div class="number">
+                        <dl class="number">
                             <dt>성인</dt>
                             <dd><input type="number" name="adult" id="adult" value="1" min="1" max="4"></dd>
                             <dt>어린이</dt>
                             <dd><input type="number" name="kid" id="kid" value="1" min="1" max="4"></dd>
-                        </div>
+                        </dl>
                     </div>
                     <!-- 요소 클릭 시 특정 페이지로 바로 이동은 a -->
                     <!-- 요소 클릭 시 조건에 따른 분기가 갈리면 button-->
@@ -73,19 +149,10 @@
                     <p><button type="button" id="search_btn">검색</button></p>
                 </form>
             </div>
-        </div>
+        </div><!-- e : main -->
         <div id="footer"></div>
     </div>
 </body>
 </html>
 
-<ul> <!-- 인원 다른 버전 디자인에 맞게 선택 -->
-    <li>
-        <label for="adult">성인</label>
-        <input type="number" name="adult" id="adult" value="1">
-    </li>
-    <li>
-        <label for="kid">어린이</label>
-        <input type="number" name="kid" id="kid" value="1">
-    </li>
-</ul>
+
