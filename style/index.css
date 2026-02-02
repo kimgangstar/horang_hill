@@ -1,0 +1,51 @@
+body {}
+#wrap {}
+#wrap header {}
+#wrap header h1 {}
+#wrap header h1 a {}
+#wrap header h1 a img {}
+#wrap header #gnb {}
+#wrap header #gnb .lnb_depth1 {}
+#wrap header #gnb .lnb_depth1 > li {} 
+#wrap header #gnb .lnb_depth1 > li > a {} /* 20 */
+#wrap header #gnb .lnb_depth1 > li > .lnb_depth2 {}
+#wrap header #gnb .lnb_depth1 > li > .lnb_depth2 > li {}
+#wrap header #gnb .lnb_depth1 > li > .lnb_depth2 > li > a {}
+#wrap header #gnb .lnb_depth1 > li > .lnb_depth2 > li > .lnb_depth3 {}
+#wrap header #gnb .lnb_depth1 > li > .lnb_depth2 > li > .lnb_depth3  li {}
+#wrap header #gnb .lnb_depth1 > li > .lnb_depth2 > li > .lnb_depth3  li  a {}
+/* ========================================== main ============================= */
+/* ========================================== main 1. 히어로배너 ============================= */
+#wrap main {}
+#wrap main #hero_bnr {}
+#wrap main #hero_bnr .add_text {}
+#wrap main #hero_bnr .add_text p {}
+#wrap main #hero_bnr .add_text h1 {}
+#wrap main #hero_bnr form
+#wrap main #hero_bnr form .room_in_out {}
+#wrap main #hero_bnr form .room_in_out h2 {}
+#wrap main #hero_bnr form .room_in_out p {}
+#wrap main #hero_bnr form .room_in_out p #room_type {}
+#wrap main #hero_bnr form .room_in_out p #room_type option {}
+#wrap main #hero_bnr form .check_in_out {}
+#wrap main #hero_bnr form .check_in_out .in {}
+#wrap main #hero_bnr form .check_in_out .in h2 {}
+#wrap main #hero_bnr form .check_in_out .in p {}
+#wrap main #hero_bnr form .check_in_out .in p #in_date {}
+#wrap main #hero_bnr form .check_in_out .day {}
+#wrap main #hero_bnr form .check_in_out .day img {}
+#wrap main #hero_bnr form .check_in_out .day em {}
+#wrap main #hero_bnr form .check_in_out .out {}
+#wrap main #hero_bnr form .check_in_out .out h2 {}
+#wrap main #hero_bnr form .check_in_out .out p {}
+#wrap main #hero_bnr form .check_in_out .out p #out_date {}
+#wrap main #hero_bnr form .person {}
+#wrap main #hero_bnr form .person > h2 {}
+#wrap main #hero_bnr form .person > .number {}
+#wrap main #hero_bnr form .person > .number dt {}
+#wrap main #hero_bnr form .person > .number dd #adult {}
+#wrap main #hero_bnr form .person > .number dd #kid  {}
+#wrap main #hero_bnr form > p {}
+#wrap main #hero_bnr form > p #search_btn {}
+/* ========================================== main footer ============================= */
+#wrap footer {}
