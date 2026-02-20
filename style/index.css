@@ -1,51 +1,95 @@
-body {}
-#wrap {}
-#wrap header {}
-#wrap header h1 {}
-#wrap header h1 a {}
-#wrap header h1 a img {}
-#wrap header #gnb {}
-#wrap header #gnb .lnb_depth1 {}
-#wrap header #gnb .lnb_depth1 > li {} 
-#wrap header #gnb .lnb_depth1 > li > a {} /* 20 */
-#wrap header #gnb .lnb_depth1 > li > .lnb_depth2 {}
-#wrap header #gnb .lnb_depth1 > li > .lnb_depth2 > li {}
-#wrap header #gnb .lnb_depth1 > li > .lnb_depth2 > li > a {}
-#wrap header #gnb .lnb_depth1 > li > .lnb_depth2 > li > .lnb_depth3 {}
-#wrap header #gnb .lnb_depth1 > li > .lnb_depth2 > li > .lnb_depth3  li {}
-#wrap header #gnb .lnb_depth1 > li > .lnb_depth2 > li > .lnb_depth3  li  a {}
-/* ========================================== main ============================= */
-/* ========================================== main 1. 히어로배너 ============================= */
 #wrap main {}
-#wrap main #hero_bnr {}
-#wrap main #hero_bnr .add_text {}
-#wrap main #hero_bnr .add_text p {}
-#wrap main #hero_bnr .add_text h1 {}
-#wrap main #hero_bnr form
-#wrap main #hero_bnr form .room_in_out {}
-#wrap main #hero_bnr form .room_in_out h2 {}
-#wrap main #hero_bnr form .room_in_out p {}
-#wrap main #hero_bnr form .room_in_out p #room_type {}
-#wrap main #hero_bnr form .room_in_out p #room_type option {}
-#wrap main #hero_bnr form .check_in_out {}
-#wrap main #hero_bnr form .check_in_out .in {}
-#wrap main #hero_bnr form .check_in_out .in h2 {}
-#wrap main #hero_bnr form .check_in_out .in p {}
-#wrap main #hero_bnr form .check_in_out .in p #in_date {}
-#wrap main #hero_bnr form .check_in_out .day {}
-#wrap main #hero_bnr form .check_in_out .day img {}
-#wrap main #hero_bnr form .check_in_out .day em {}
-#wrap main #hero_bnr form .check_in_out .out {}
-#wrap main #hero_bnr form .check_in_out .out h2 {}
-#wrap main #hero_bnr form .check_in_out .out p {}
-#wrap main #hero_bnr form .check_in_out .out p #out_date {}
-#wrap main #hero_bnr form .person {}
-#wrap main #hero_bnr form .person > h2 {}
-#wrap main #hero_bnr form .person > .number {}
-#wrap main #hero_bnr form .person > .number dt {}
-#wrap main #hero_bnr form .person > .number dd #adult {}
-#wrap main #hero_bnr form .person > .number dd #kid  {}
-#wrap main #hero_bnr form > p {}
-#wrap main #hero_bnr form > p #search_btn {}
-/* ========================================== main footer ============================= */
-#wrap footer {}
+#wrap main #hero_bnr {
+    height: 830px; min-width: 1220px;
+    background-image: url(../images/horang_hero_bnr.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 503px;
+}
+#wrap main #hero_bnr .add_text {
+    text-align: center;
+    padding-bottom: 40px;
+}
+#wrap main #hero_bnr .add_text p {
+    font-size: 1.88rem;
+    color: #fff;
+    font-weight: 500;
+}
+#wrap main #hero_bnr .add_text h1 {
+    color: #fff;
+    font-size: 3.13rem;
+    font-weight: 700;
+}
+#wrap main #hero_bnr .add_text p,
+#wrap main #hero_bnr .add_text h1 {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    line-height: 1.5;
+    font-family: 'noto sans kr', san-serif;
+}
+#wrap main #hero_bnr #reservation_form {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 925px; 
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 6px;
+    display: flex; /* 객실 체크인아웃 인원 검색 ~ 자식들 정렬하기 위해 flex사용 */
+    gap: 10px;
+}
+/* -----------------객실~인원 공통 디자인---------------- */
+#wrap main #hero_bnr #reservation_form .room h2,
+#wrap main #hero_bnr #reservation_form .check_in_out .in h2,
+#wrap main #hero_bnr #reservation_form .check_in_out .out h2,
+#wrap main #hero_bnr #reservation_form .person h2 {
+    background-color: aqua;
+
+}
+#wrap main #hero_bnr #reservation_form h2+div,
+#wrap main #hero_bnr #reservation_form ul li {
+    background-color: yellow;
+}
+/* 객실 선택------------------------------------------- */
+#wrap main #hero_bnr #reservation_form .room  {}
+#wrap main #hero_bnr #reservation_form .room h2 {}
+#wrap main #hero_bnr #reservation_form .room .room_type {}
+#wrap main #hero_bnr #reservation_form .room .room_type > a {}
+#wrap main #hero_bnr #reservation_form .room .room_type > a .name {}
+#wrap main #hero_bnr #reservation_form .room .room_type > a .name span {}
+#wrap main #hero_bnr #reservation_form .room .room_type > a img {}
+#wrap main #hero_bnr #reservation_form .room .room_type .room_open {display: none;}
+#wrap main #hero_bnr #reservation_form .room .room_type .room_open a {}
+#wrap main #hero_bnr #reservation_form .room .room_type .room_open a .name {}
+#wrap main #hero_bnr #reservation_form .room .room_type .room_open a .name span {}
+#wrap main #hero_bnr #reservation_form .check_in_out {display: flex;}
+#wrap main #hero_bnr #reservation_form .check_in_out .in {}
+#wrap main #hero_bnr #reservation_form .check_in_out .in h2 {}
+#wrap main #hero_bnr #reservation_form .check_in_out .in .check_in {}
+#wrap main #hero_bnr #reservation_form .check_in_out .in .check_in a {}
+#wrap main #hero_bnr #reservation_form .check_in_out .in .check_in a .date {}
+#wrap main #hero_bnr #reservation_form .check_in_out .in .check_in a img {}
+#wrap main #hero_bnr #reservation_form .check_in_out .day {}
+#wrap main #hero_bnr #reservation_form .check_in_out .day img {}
+#wrap main #hero_bnr #reservation_form .check_in_out .day img em {}
+#wrap main #hero_bnr #reservation_form .check_in_out .out {}
+#wrap main #hero_bnr #reservation_form .check_in_out .out h2 {}
+#wrap main #hero_bnr #reservation_form .check_in_out .out .check_out {}
+#wrap main #hero_bnr #reservation_form .check_in_out .out .check_out a {}
+#wrap main #hero_bnr #reservation_form .check_in_out .out .check_out a .date {}
+#wrap main #hero_bnr #reservation_form .check_in_out .out .check_out a img {}
+/*----------------------------------------- 인원--------------------------------------------------- */
+#wrap main #hero_bnr #reservation_form .person {}
+#wrap main #hero_bnr #reservation_form .person h2 {}
+#wrap main #hero_bnr #reservation_form .person h2 .number {}
+#wrap main #hero_bnr #reservation_form .person h2 .number li {}
+#wrap main #hero_bnr #reservation_form .person h2 .number li #number_btn {}
+#wrap main #hero_bnr #reservation_form .person h2 .number li #number_btn img {}
+#wrap main #hero_bnr #reservation_form .person h2 .number li #adult_add {}
+#wrap main #hero_bnr #reservation_form .person h2 .number li #adult_remove {}
+#wrap main #hero_bnr #reservation_form .person h2 .number li span {}
+#wrap main #hero_bnr #reservation_form .person h2 .number li span label{}
+#wrap main #hero_bnr #reservation_form .person h2 .number li span #adult {}
+#wrap main #hero_bnr #reservation_form .person h2 .number li span #kid {}
+#wrap main #hero_bnr #reservation_form .person h2 .number li #kid_add {}
+#wrap main #hero_bnr #reservation_form .person h2 .number li #kid_remove {}
+/* ----------------------------------------------------------------------------- */
+#wrap main #hero_bnr #reservation_form p {}
+#wrap main #hero_bnr #reservation_form p #search_btn {}
