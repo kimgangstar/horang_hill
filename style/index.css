@@ -33,6 +33,9 @@
     padding: 20px;
     border-radius: 6px;
     display: flex; /* 객실 체크인아웃 인원 검색 ~ 자식들 정렬하기 위해 flex사용 */
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
     gap: 10px;
 }
 /* -----------------객실~인원 공통 디자인---------------- */
@@ -40,8 +43,19 @@
 #wrap main #hero_bnr #reservation_form .check_in_out .in h2,
 #wrap main #hero_bnr #reservation_form .check_in_out .out h2,
 #wrap main #hero_bnr #reservation_form .person h2 {
-    background-color: aqua;
-
+    margin-bottom: 10px;
+}
+#wrap main #hero_bnr #reservation_form .check_in_out .in .check_in a,/* 체크인,아웃 공통 */
+#wrap main #hero_bnr #reservation_form .check_in_out .check_out a {
+    background-color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 150px; height: 42px;
+    border: 1px solid #aaa; border-radius: 6px;
+    align-items: center;
+    padding: 14px 12px; /* 0px 12px 해도 가능 -> 얼라인 아이템을 센터로 맞춰놨기 때문에 */
+    font-size: 0.88rem;
+    justify-content: space-between;
 }
 #wrap main #hero_bnr #reservation_form h2+div,
 #wrap main #hero_bnr #reservation_form ul li {
@@ -50,24 +64,62 @@
 /* 객실 선택------------------------------------------- */
 #wrap main #hero_bnr #reservation_form .room  {}
 #wrap main #hero_bnr #reservation_form .room h2 {}
-#wrap main #hero_bnr #reservation_form .room .room_type {}
-#wrap main #hero_bnr #reservation_form .room .room_type > a {}
+#wrap main #hero_bnr #reservation_form .room .room_type {
+    position: relative; /* room open의 기준 */
+}
+#wrap main #hero_bnr #reservation_form .room .room_type:hover .room_open {
+    display: flex;
+    flex-flow: column nowrap;
+}
+#wrap main #hero_bnr #reservation_form .room .room_type > .room_open a,
+#wrap main #hero_bnr #reservation_form .room .room_type > a { /* 포사이드방 */
+    background-color: #fff;
+    border: 1px solid #aaa; border-radius: 6px;
+    display: flex;/* flex 설정 시 형제끼리 크기 맞추는 자동설정 때문에 이미지 비율이 커질 수 있음. 메인,교차축 설정하면서 해결됨. */
+    flex-flow: row nowrap;
+    align-items:center ;
+    justify-content: space-between;
+    width: 150px; height: 42px;
+    font-size: 0.88rem;
+    padding: 0 12px;
+}
 #wrap main #hero_bnr #reservation_form .room .room_type > a .name {}
-#wrap main #hero_bnr #reservation_form .room .room_type > a .name span {}
+#wrap main #hero_bnr #reservation_form .room .room_type .room_open a .name span, /* open 글자 */
+#wrap main #hero_bnr #reservation_form .room .room_type > a .name span {
+    font-size: 0.75rem;
+    color: #aaa; 
+}
 #wrap main #hero_bnr #reservation_form .room .room_type > a img {}
-#wrap main #hero_bnr #reservation_form .room .room_type .room_open {display: none;}
+#wrap main #hero_bnr #reservation_form .room .room_type .room_open {
+    position: absolute; /* absolute 설정 시 기존태그 크기가 inline-block처럼 바뀜 */
+    left: 0; top: 100%;
+    display: none;
+}
 #wrap main #hero_bnr #reservation_form .room .room_type .room_open a {}
 #wrap main #hero_bnr #reservation_form .room .room_type .room_open a .name {}
 #wrap main #hero_bnr #reservation_form .room .room_type .room_open a .name span {}
-#wrap main #hero_bnr #reservation_form .check_in_out {display: flex;}
+#wrap main #hero_bnr #reservation_form .check_in_out {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
 #wrap main #hero_bnr #reservation_form .check_in_out .in {}
 #wrap main #hero_bnr #reservation_form .check_in_out .in h2 {}
 #wrap main #hero_bnr #reservation_form .check_in_out .in .check_in {}
 #wrap main #hero_bnr #reservation_form .check_in_out .in .check_in a {}
 #wrap main #hero_bnr #reservation_form .check_in_out .in .check_in a .date {}
 #wrap main #hero_bnr #reservation_form .check_in_out .in .check_in a img {}
-#wrap main #hero_bnr #reservation_form .check_in_out .day {}
-#wrap main #hero_bnr #reservation_form .check_in_out .day img {}
+#wrap main #hero_bnr #reservation_form .check_in_out .day { /* n박  */
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    left: 0; top: 23px;
+    padding: 0 10px;
+    font-size: 0.88rem;
+}
+#wrap main #hero_bnr #reservation_form .check_in_out .day img {
+    margin-bottom: 4px;
+}
 #wrap main #hero_bnr #reservation_form .check_in_out .day img em {}
 #wrap main #hero_bnr #reservation_form .check_in_out .out {}
 #wrap main #hero_bnr #reservation_form .check_in_out .out h2 {}
@@ -78,18 +130,111 @@
 /*----------------------------------------- 인원--------------------------------------------------- */
 #wrap main #hero_bnr #reservation_form .person {}
 #wrap main #hero_bnr #reservation_form .person h2 {}
-#wrap main #hero_bnr #reservation_form .person h2 .number {}
-#wrap main #hero_bnr #reservation_form .person h2 .number li {}
-#wrap main #hero_bnr #reservation_form .person h2 .number li #number_btn {}
-#wrap main #hero_bnr #reservation_form .person h2 .number li #number_btn img {}
-#wrap main #hero_bnr #reservation_form .person h2 .number li #adult_add {}
-#wrap main #hero_bnr #reservation_form .person h2 .number li #adult_remove {}
-#wrap main #hero_bnr #reservation_form .person h2 .number li span {}
-#wrap main #hero_bnr #reservation_form .person h2 .number li span label{}
-#wrap main #hero_bnr #reservation_form .person h2 .number li span #adult {}
-#wrap main #hero_bnr #reservation_form .person h2 .number li span #kid {}
-#wrap main #hero_bnr #reservation_form .person h2 .number li #kid_add {}
-#wrap main #hero_bnr #reservation_form .person h2 .number li #kid_remove {}
+#wrap main #hero_bnr #reservation_form .person .number {
+    display: flex;
+    flex-flow: row nowrap;
+}
+#wrap main #hero_bnr #reservation_form .person .number li:first-child, /* 인원 */
+#wrap main #hero_bnr #reservation_form .person .number li:last-child {
+    width: 150px; height: 42px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+    background-color: #fff; 
+    border:  1px solid #aaa; border-radius: 6px;
+    padding: 14px 12px;
+    font-size: 0.88rem;
+}
+#wrap main #hero_bnr #reservation_form .person .number li .number_btn {
+    width: 20px; height: 24px;
+}
+#wrap main #hero_bnr #reservation_form .person .number li .number_btn img {}
+#wrap main #hero_bnr #reservation_form .person .number li #adult_add /* +,- 공통 */
+#wrap main #hero_bnr #reservation_form .person .number li #adult_remove {}
+#wrap main #hero_bnr #reservation_form .person .number li span {}
+#wrap main #hero_bnr #reservation_form .person .number li span label {}
+#wrap main #hero_bnr #reservation_form .person .number li span input {
+    width: 20px; text-align: center;
+    font-size: 0.88rem;
+}
+#wrap main #hero_bnr #reservation_form .person .number li span #adult
+#wrap main #hero_bnr #reservation_form .person .number li span #kid {}
+#wrap main #hero_bnr #reservation_form .person .number li #kid_add {}
+#wrap main #hero_bnr #reservation_form .person .number li #kid_remove {}
 /* ----------------------------------------------------------------------------- */
-#wrap main #hero_bnr #reservation_form p {}
-#wrap main #hero_bnr #reservation_form p #search_btn {}
+#wrap main #hero_bnr #reservation_form > p {
+    position: relative; left: -10px; top: 12px;
+}
+#wrap main #hero_bnr #reservation_form > p #search_btn { /* 검색버튼 */
+    background-color: #27536B;
+    color: #fff;
+    width: 54px; height: 42px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+}
+/* ----------호랑가시나무 소개-------------------------------------------------- */
+#wrap main #introduction {
+    background-color: #f5f5f5;
+}
+#wrap main #introduction .intro_contents {
+    width: 1220px;
+    padding: 70px 0;
+    margin: 0 auto;
+}
+#wrap main #introduction .intro_contents h1 {
+    font-size: 1.5rem; font-weight: 500;
+    margin-bottom: 30px;
+}
+#wrap main #introduction .intro_contents p {
+    font-size: 0.94rem;
+    line-height: 1.7rem;
+    margin-bottom: 30px;
+    word-spacing: 0;
+}
+#wrap main #introduction .intro_contents a {}
+#wrap main #introduction .intro_contents a img {}
+/* ----------------------------------주변관광지----------- */
+#wrap main #tourist_attraction {}
+#wrap main #tourist_attraction .attraction_list {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+#wrap main #tourist_attraction .attraction_list h1 {
+    font-size: 1.5rem; font-weight: 500;
+    margin-bottom: 30px;
+}
+#wrap main #tourist_attraction .attraction_list p {
+    font-size: 0.94rem;
+    line-height: 1.7rem;
+    margin-bottom: 30px;
+    word-spacing: 0;
+}
+#wrap main #tourist_attraction .attraction_list ul {
+    display: flex;
+    flex-flow: row nowrap;
+    /* gap: 20px; */
+    justify-content: space-between;
+}
+#wrap main #tourist_attraction .attraction_list ul li {
+    width: calc((100% - 60px) / 4 );
+}
+#wrap main #tourist_attraction .attraction_list ul li > a {
+}
+#wrap main #tourist_attraction .attraction_list ul li > a img:hover {
+}
+#wrap main #tourist_attraction .attraction_list ul li > a img {
+    margin-bottom: 10px;
+}
+#wrap main #tourist_attraction .attraction_list ul li > a h2 {
+    font-size: 1.13rem;
+    font-weight: 500;
+}
+#wrap main #tourist_attraction .attraction_list > a {
+    font-size: 0.94rem;
+    text-decoration: underline;
+    text-align: center;
+}
+#wrap main #tourist_attraction .attraction_list > a > p {margin-top: 50px;}
