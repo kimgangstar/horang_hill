@@ -57,3 +57,19 @@ body {}
 /* ========================================== main footer ============================= */
 #wrap footer {}
 #wrap footer p {}
+
+/* ------------------------------------------main w1220+p70 공통 디자인 값------------------------------- */
+#wrap main .container_layout {
+    width: 1220px; margin: 0 auto; padding: 70px;
+}
+#wrap main .container_layout h1 {
+    font-size: 1.5rem; font-weight: 500;
+    margin-bottom: 30px;
+}
+#wrap main .container_layout h1+p {
+    font-size: 0.94rem;
+    line-height: 1.7rem;
+    margin-bottom: 30px;
+    word-spacing: 0;
+}
+/* 공통 디자인 값 주기 */

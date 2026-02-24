@@ -38,7 +38,7 @@
     justify-content: space-between;
     gap: 10px;
 }
-/* -----------------객실~인원 공통 디자인---------------- */
+/* -----------------------------------------객실~인원 공통 디자인------------------------------------------------ */
 #wrap main #hero_bnr #reservation_form .room h2,
 #wrap main #hero_bnr #reservation_form .check_in_out .in h2,
 #wrap main #hero_bnr #reservation_form .check_in_out .out h2,
@@ -58,10 +58,8 @@
     justify-content: space-between;
 }
 #wrap main #hero_bnr #reservation_form h2+div,
-#wrap main #hero_bnr #reservation_form ul li {
-    background-color: yellow;
-}
-/* 객실 선택------------------------------------------- */
+#wrap main #hero_bnr #reservation_form ul li {}
+/*--------------------------------------------- 객실 선택------------------------------------------- */
 #wrap main #hero_bnr #reservation_form .room  {}
 #wrap main #hero_bnr #reservation_form .room h2 {}
 #wrap main #hero_bnr #reservation_form .room .room_type {
@@ -163,7 +161,7 @@
 #wrap main #hero_bnr #reservation_form .person .number li span #kid {}
 #wrap main #hero_bnr #reservation_form .person .number li #kid_add {}
 #wrap main #hero_bnr #reservation_form .person .number li #kid_remove {}
-/* ----------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------- */
 #wrap main #hero_bnr #reservation_form > p {
     position: relative; left: -10px; top: 12px;
 }
@@ -174,67 +172,51 @@
     border-radius: 6px;
     font-size: 0.88rem;
 }
-/* ----------호랑가시나무 소개-------------------------------------------------- */
+/* ----------호랑가시나무 소개------------------------------------------------------------------------------ */
 #wrap main #introduction {
     background-color: #f5f5f5;
 }
-#wrap main #introduction .intro_contents {
-    width: 1220px;
-    padding: 70px 0;
-    margin: 0 auto;
+#wrap main #introduction #intro_contents {}
+#wrap main #introduction #intro_contents h1 {}
+#wrap main #introduction #intro_contents p {}
+#wrap main #introduction #intro_contents a {}
+#wrap main #introduction #intro_contents a img {
+    width: 100%; /* 작은 아이콘 이미지 말고는 이미지에 w100% 걸어주는 습관 들이기 */
 }
-#wrap main #introduction .intro_contents h1 {
-    font-size: 1.5rem; font-weight: 500;
-    margin-bottom: 30px;
-}
-#wrap main #introduction .intro_contents p {
-    font-size: 0.94rem;
-    line-height: 1.7rem;
-    margin-bottom: 30px;
-    word-spacing: 0;
-}
-#wrap main #introduction .intro_contents a {}
-#wrap main #introduction .intro_contents a img {}
-/* ----------------------------------주변관광지----------- */
+/* ----------------------------------주변관광지-------------------------------------------------------- */
 #wrap main #tourist_attraction {}
-#wrap main #tourist_attraction .attraction_list {
-    width: 1220px;
-    margin: 0 auto;
-    padding: 70px 0;
-}
-#wrap main #tourist_attraction .attraction_list h1 {
-    font-size: 1.5rem; font-weight: 500;
-    margin-bottom: 30px;
-}
-#wrap main #tourist_attraction .attraction_list p {
-    font-size: 0.94rem;
-    line-height: 1.7rem;
-    margin-bottom: 30px;
-    word-spacing: 0;
-}
-#wrap main #tourist_attraction .attraction_list ul {
+#wrap main #tourist_attraction #attraction_list {}
+#wrap main #tourist_attraction #attraction_list h1 {}
+#wrap main #tourist_attraction #attraction_list h1+p {}
+#wrap main #tourist_attraction #attraction_list ul {
     display: flex;
     flex-flow: row nowrap;
-    /* gap: 20px; */
     justify-content: space-between;
+    margin: 0 0 80px;
 }
-#wrap main #tourist_attraction .attraction_list ul li {
-    width: calc((100% - 60px) / 4 );
+#wrap main #tourist_attraction #attraction_list ul li {
+    width: calc((100% - 60px) / 4);
 }
-#wrap main #tourist_attraction .attraction_list ul li > a {
+#wrap main #tourist_attraction #attraction_list ul li a {
+    overflow: hidden;
+    display: block;
+    height: 250px;
+    margin: 0 0 10px;
+} /* a를 마스크라고 생각 a 안에서만 보이게 생각(부모만 후보가 될 수 있음) */
+#wrap main #tourist_attraction #attraction_list ul li a:hover img {
+    width: 120%;
 }
-#wrap main #tourist_attraction .attraction_list ul li > a img:hover {
+#wrap main #tourist_attraction #attraction_list ul li a img {
+    width: 100%;
 }
-#wrap main #tourist_attraction .attraction_list ul li > a img {
-    margin-bottom: 10px;
-}
-#wrap main #tourist_attraction .attraction_list ul li > a h2 {
+#wrap main #tourist_attraction #attraction_list ul li h2 {
     font-size: 1.13rem;
     font-weight: 500;
 }
-#wrap main #tourist_attraction .attraction_list > a {
-    font-size: 0.94rem;
-    text-decoration: underline;
-    text-align: center;
+#wrap main #tourist_attraction #attraction_list .more {
+    border-bottom: 1px solid black;
+    margin: 0 auto;
+    width: max-content;
+    display: block;
 }
-#wrap main #tourist_attraction .attraction_list > a > p {margin-top: 50px;}
+
