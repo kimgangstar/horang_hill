@@ -59,11 +59,19 @@ body {}
 #wrap footer p {}
 
 /* ------------------------------------------main w1220+p70 공통 디자인 값------------------------------- */
+#wrap footer .container_layout,
 #wrap main .container_layout {
-    width: 1220px; margin: 0 auto; padding: 70px;
+    width: 1220px; margin: 0 auto; padding: 70px 0;
 }
 #wrap main .container_layout h1 {
     font-size: 1.5rem; font-weight: 500;
+    margin-bottom: 30px;
+}
+#wrap main .container_layout ul li p,
+#wrap main .container_layout h2+p {
+    font-size: 0.94rem;
+    word-spacing: 0;
+    line-height: 1.8rem;
     margin-bottom: 30px;
 }
 #wrap main .container_layout h1+p {
@@ -72,4 +80,7 @@ body {}
     margin-bottom: 30px;
     word-spacing: 0;
 }
-/* 공통 디자인 값 주기 */
+#wrap main .container_layout h2 {
+    font-size: 1.13rem;
+    font-weight: 500;
+}

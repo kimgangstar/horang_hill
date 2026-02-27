@@ -200,7 +200,7 @@
 #wrap main #tourist_attraction #attraction_list ul li a {
     overflow: hidden;
     display: block;
-    height: 250px;
+    height: 200px;
     margin: 0 0 10px;
 } /* a를 마스크라고 생각 a 안에서만 보이게 생각(부모만 후보가 될 수 있음) */
 #wrap main #tourist_attraction #attraction_list ul li a:hover img {
@@ -219,4 +219,69 @@
     width: max-content;
     display: block;
 }
+#wrap main #reservation {
+    background-color: #f5f5f5;
+}
+#wrap main #reservation #res_contents {}
+#wrap main #reservation #res_contents h1 {}
+#wrap main #reservation #res_contents p {}
+#wrap main #reservation #res_contents ul {
+    width: 1220px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#wrap main #reservation #res_contents ul li {}
+#wrap main #reservation #res_contents ul li a {}
+#wrap main #reservation #res_contents ul li a img {}
+#wrap main #reservation #res_contents ul li h2 {
+    margin-bottom: 10px;
+}
+#wrap main #reservation #res_contents ul li h2+p {
+    font-size: 0.94rem;
+    line-height: 1.7rem;
+    word-spacing: 0;
+}
+#wrap main #reservation #res_contents .more {
+    border-bottom: 1px solid black;
+    margin: 0 auto;
+    width: max-content;
+    display: block;
+}
+/* ----------------------------------------오시는길----------------------------------- */
+#wrap main #transportation {}
+#wrap main #transportation #trans_contents {}
+#wrap main #transportation #trans_contents .text {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#wrap main #transportation #trans_contents .text h1 {
+    font-size: 1.5rem; font-weight: 500;
+}
+#wrap main #transportation #trans_contents .text p {}
+#wrap main #transportation #trans_contents a {}
+#wrap main #transportation #trans_contents a img {
+    margin-bottom: 30px;
+    width: 100%;
+}
+#wrap main #transportation #trans_contents ul {}
+#wrap main #transportation #trans_contents ul li  {}
+#wrap main #transportation #trans_contents ul li h2 {
+    font-size: 1.5rem; font-weight: 700; line-height: 1.8rem;
+}
+#wrap main #transportation #trans_contents ul li p {}
+#wrap main #transportation #trans_contents ul li p:nth-last-child {}
+/* --------------------------------footer--------------------------------------------- */
+#wrap footer {background-color: #000;}
+#wrap footer #footer_wrap {}
+#wrap footer #footer_wrap .container_layout {}
+#wrap footer #footer_wrap .container_layout address {
+    font-size: 0.81rem; 
+    color:#fff; 
+    line-height: 2.0;
+}
+#wrap footer #footer_wrap .container_layout address a {color: #fff; text-decoration: underline;}
 
